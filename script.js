@@ -66,7 +66,6 @@ back.addEventListener("click", function () {
   gameContainer.classList.add("none");
   playAgainBtn.classList.remove("none");
   hide.classList.add('hide')
-  scoreCount.innerText = 0;
 });
 
 closeBtn.addEventListener("click", () => {
