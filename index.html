@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <!-- <h1>Battery Status</h1> -->
+        <div class="top">
+          <p id="battery-status">Fetching battery data</p>
+        </div>
+
+        <header>
+          <div>
+            <h2>Rock</h2>
+            <h2>Paper</h2>
+            <h2>Scissors</h2>
+            <h2 class="hide">Spock</h2>
+            <h2 class="hide">Lizard</h2>
+          </div>
+          <div class="scoreBoard">
+            <p class="score">Score</p>
+            <span id="scoreCount">0</span>
+          </div>
+        </header>
+
+        <div class="game-container none">
+          <div class="picked player">
+            <div class="playerContainer" id="player-pick"></div>
+            <h2 class="youPicked">You Picked</h2>
+          </div>
+
+          <div class="picked computer">
+            <div class="computerContainer" id="house-pick"></div>
+            <h2>The House Picked</h2>
+          </div>
+
+          <div class="result resultNone">
+            <span id="resultText"></span>
+            <button class="playAgainBtn">Play Again</button>
+            <button id="playAgainBtnBonus">Play Again</button>
+          </div>
+        </div>
+
+        <div class="image-div">
+          <img src="./images/bg-triangle.svg" alt="" class="backgroungImg" />
+          <div class="icon-container">
+            <div class="flexButtons">
+              <button class="icon btn" id="paper" value="paper">
+                <img src="./images/icon-paper.svg" alt="Paper" />
+              </button>
+              <button class="icon btn" id="scissors" value="scissors">
+                <img src="./images/icon-scissors.svg" alt="Scissors" />
+              </button>
+            </div>
+
+            <button class="icon btn" id="rock" value="rock">
+              <img src="./images/icon-rock.svg" alt="Rock" />
+            </button>
+          </div>
+        </div>
+        <!-- Bonus Game Section -->
+        <section class="bonus-game-section bonus-game-none">
+          <img src="./images/bg-pentagon.svg" alt="" class="backgroungImg" />
+          <div class="icon-container">
+            <button class="bonusicon bonusBtn" id="scissors" value="scissors">
+              <img src="./images/icon-scissors.svg" alt="Scissors" />
+            </button>
+
+            <div class="flex1">
+              <button class="bonusicon bonusBtn" id="spock" value="spock">
+                <img src="./images//icon-spock.svg" alt="lizard" />
+              </button>
+              <button class="bonusicon bonusBtn" id="paper" value="paper">
+                <img src="./images/icon-paper.svg" alt="Paper" />
+              </button>
+            </div>
+
+            <div class="flex2">
+              <button class="bonusicon bonusBtn" id="lizard" value="lizard">
+                <img src="./images/icon-lizard.svg" alt="lizard" />
+              </button>
+
+              <button class="bonusicon bonusBtn" id="rock" value="rock">
+                <img src="./images/icon-rock.svg" alt="Rock" />
+              </button>
+            </div>
+          </div>
+        </section>
+        <div class="buttonGame">
+          <button class="buttonBonus" id="showBonusSection">Bonus Game</button>
+        </div>
+        <div class="rules">
+          <button id="rules">Rules</button>
+        </div>
+        <button id="bonusRule" class="none">Bonus Rule</button>
+
+        <button id="back" class="none">Back</button>
+      </div>
+    </main>
+    <div class="modal-overlay hidden">
+      <div class="modal">
+        <div class="rulesDiv">
+          <h2>Rules</h2>
+          <button id="closeBtn">
+            <img src="./images/icon-close.svg" alt="Close" />
+          </button>
+        </div>
+
+        <img src="./images/image-rules.svg" alt="" />
+      </div>
+    </div>
+    <div class="bonus-modal-overlay bonusHidden">
+      <div class="modal">
+        <div class="bonusRulesDiv">
+          <header class="bonusRuleHeader">
+            <h2>Rules</h2>
+            <button id="bonusCloseBtn">
+              <img src="./images/icon-close.svg" alt="Close" />
+            </button>
+          </header>
+
+          <img src="./images/image-rules-bonus.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Score You Picked The House Picked You Win You Lose Play Again -->
+    <!-- 
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://x.com/FaloluH77473" target="_blank">Falolu Henry</a>.
+    </div> -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
